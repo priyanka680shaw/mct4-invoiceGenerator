@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        span{
+            font-size: 30px;
+        }
+        .productBlock{
+            padding: 20px;
+            background-color: aqua;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <!-- Costumer Information -->
+        <section>
+            <h1>Invoice</h1>
+            <div class="costumerInfo">
+                <from>
+                    <fieldset>
+                        <legend>User Information</legend>
+                        <lable for="name">
+                            <input type="text" id="name" placeholder="Enter Coustomer Name">
+                        </lable>
+                        <lable for="proId">
+                            <input type="text" id="proId" placeholder="Enter Product Id">
+                        </lable>
+                        <lable for="date">
+                            <input type="date" id="date" placeholder="">
+                        </lable>
+                        <lable for="address">
+                            <input type="text" id="address" placeholder="Enter Address">
+                        </lable>
+                    </fieldset>
+                </from>
+            </div>
+        </section>
+        <!--*************** Costumer Information section ended ***************-->
+        <!--##################################################################-->
+        <!-- Product Details -->
+        <section>
+            <h1>Product Details</h1>
+            <button>add</button>
+            <fieldset>
+                <legend>
+                    Product Details
+                </legend>
+                <div id="productContainer" style =" background-color: red;"></div>
+                    <!-- ad proiduct dynamically -->
+                </div>
+                <br><br>
+                <!-- Payment Amount -->
+                    <fieldset>
+                    <legend>
+                        Amount detail
+                    </legend>
+                    <!-- <label id="totalAmount">
+                        <input type="" id="totalAmount" placeholder="totalAmount" value="999">
+                    </label> -->
+                    <label for="productAmount">
+                        <input type="" id = "productAmount"  placeholder="Net Amount" value=""/>
+                    </label>
+                    <label for="gst">
+                        <input type="" id = "gst"  placeholder="Gst" value="10"/>
+                    </label>
+                    <label for="netAmount">
+                        <input type="" id = "netAmount"  placeholder="Total Amount to be paid"/>
+                    </label>
+                 </fieldset>
+            </fieldset>
+        </section>
+    </main>
+
+    <script src="./js/script.js"></script>
+</body>
+</html>

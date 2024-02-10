@@ -1,4 +1,5 @@
 /* **************************************************** */
+
 const productContainer = document.querySelector("#productContainer");
 const button = document.querySelector("button");
 var count = 0;
@@ -15,18 +16,21 @@ function addProdductItem(){
    </div>
    <br><br>`
 }
-
-function product(q,a){
-   return q*a;
-}
-let productQuanitity;
-  let productAmout;
+addProdductItem();
 button.addEventListener("click", addProdductItem);
+
+const totalAmountOfProduct = document.querySelector(".totalAmountOfProduct");
+const productBlock = document.querySelector(".productBlock");
+console.log("get value" , totalAmountOfProduct.value);
+let productQuanitity;
+  let proAmt;
 productContainer.addEventListener("input" , (e)=>{
-  //console.log(e);
+  var productstore;
+  console.log(e);
   
   console.log(e.target.classList.contains("quantity"));
   //quantity
+
   if(e.target.classList.contains("quantity")){
    const qua = e.target.value;
    console.log("quantity data is store",e.target.value);
@@ -39,23 +43,42 @@ productContainer.addEventListener("input" , (e)=>{
    const amt = e.target.value
    console.log("amount data is store",amt);
    console.log(typeof amt);
-   productAmout = parseInt(amt);
-   console.log(typeof productAmout);
+   proAmt = parseInt(amt);
+   console.log(typeof proAmt);
+   productstore =( e.target.nextElementSibling.attributes.value);
+
   }
-  if(productQuanitity >0 && productAmout > 0){
-   console.log("get" , productQuanitity*productAmout);
+  if(productQuanitity >0 && proAmt > 0){
+    const product = productQuanitity*proAmt;
+    productBlock.addEventListener("click" , (e)=>{
+      console.log(e);
+      let jj = e.target.attributes.value;
+      jj=product;
+      console.log(e.target.attributes.value.value
+        )
+        console.log(jj)
+      
+        if(e.target.classList.contains("totalAmountOfProduct")){
+          totalAmountOfProduct.setAttribute('value',jj);
+
+        }
+    }) 
+ 
    
+   
+      
+      //console.log(e.target.classList.contains("quantity"))
   }
 
  // console.log(productQuanitity,productAmount);
-  //console.log(product(productQuanitity,productAmount))
+  //console.log(product(productQuanitity,productAmount)
 //   const product = product(6,7);
 //console.log(6,7);
 })
 
 
 
-console.log(product(8,6))
+
 
 var productQuantity;
 var productAmount;

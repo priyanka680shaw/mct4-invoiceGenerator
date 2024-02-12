@@ -1,7 +1,10 @@
 # Invoice Generator using JavaScript
 
 This project is an invoice generator built using HTML, CSS, and JavaScript. It allows users to input customer details, add products with their quantities and amounts, calculate the total, apply GST (Goods and Services Tax), and calculate the net amount. The interface is designed using Bootstrap for a clean and responsive layout.
+____
+![image](https://github.com/priyanka680shaw/mct4-invoiceGenerator/assets/96192066/648e7d7f-779b-4fcd-9e11-d2f0562ecf05)
 
+____
 ## Index
 
 - [Invoice Generator using JavaScript](#invoice-generator-using-javascript)

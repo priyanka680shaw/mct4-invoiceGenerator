@@ -15,7 +15,7 @@ ____
 
 ## How to Use
 
-1. **Clone the Repository**: Clone this repository to your local machine using `git clone https://github.com/yourusername/invoice-generator.git`.
+1. **Clone the Repository**: Clone this repository to your local machine using `[git clone https://github.com/yourusername/invoice-generator.git](https://priyanka680shaw.github.io/mct4-invoiceGenerator/)`.
 
 2. **Open the Project**: Navigate to the project directory and open `index.html` in your web browser.
 

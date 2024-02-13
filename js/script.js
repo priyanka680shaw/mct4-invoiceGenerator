@@ -16,7 +16,7 @@ function addProdductItem(e){
     count = parseInt(count+1);
     itemsContainer.innerHTML +=
     `<tr class="productBlock">
-    <th>${count}</th>
+    <th >${count}</th>
     <td>  <input type="text"  class="form-control text-center ${count}" placeholder="Product" aria-label="Username" aria-describedby="basic-addon1"></td>
     <td>  <input type="number" class="form-control text-center ${count} quantity" placeholder="quantity" aria-label="Username" aria-describedby="basic-addon1"></td>
     <td>  <input type="number" class="form-control text-center ${count} amount" placeholder="Amount" aria-label="Username" aria-describedby="basic-addon1"></td>
@@ -127,7 +127,7 @@ function calculateAllProductTotal(val){
  for(let i=0; i<arr.length; i++){
      sumOfAllProducts = sumOfAllProducts+arr[i];
     console.log(sumOfAllProducts);
-    document.querySelector(".totalOfAllProducts").setAttribute("value" , sumOfAllProducts);
+    document.querySelector("#totalOfAllProducts").setAttribute("value" , sumOfAllProducts);
     gstCalculate(sumOfAllProducts);
  }
 }
@@ -137,10 +137,14 @@ function calculateAllProductTotal(val){
 //reset
 function reset(){
   document.querySelector("tbody").innerHTML = `<tbody class="text-center items-Container">
-
+  
   <!-- dynamically add itens coloumn here ....... -->
 
 </tbody>`;
+document.querySelector("#totalOfAllProducts").setAttribute("value" , "");
+document.querySelector(".GST").setAttribute("value" , "");
+document.querySelector(".netAmount").setAttribute("value" , "");
+arr = [];
 }
 
 

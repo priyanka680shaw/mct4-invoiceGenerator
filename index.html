@@ -14,97 +14,193 @@
             
         }
 
-        .container{
-          background-image: linear-gradient(to right, #DCE35B , #45B649);
-        }
-        
-        .billTo{
-         box-shadow: 2px 2px 2px 10px white;
-          
+        h1{
+          color: white;
+          font-size: 80px;
+          font-weight: bolder;
+          font-family: Arial, Helvetica, sans-serif;
+          text-shadow: 2px 10px rgb(233, 106, 106);
         }
 
-        .billFrom{
-          box-shadow: 2px 2px 2px 10px white;
-          
+        body{
+          background-color: #733DD9;
+        }
+
+        .container{
+          padding: 40px 0px;
+        }
+        #tr1>th{
+          background-color: #733DD9;
+          color: white;
+          margin: auto;
+
+        }
+
+        .productBlock>td{
+          background-color: rgb(192, 174, 174);
+        }
+
+        #tableContainer{
+          border-radius: 15px;
+        }
+
+        .outerWrapper{
+          border: 2px solid rgb(161, 161, 157) !important;
+          background-color: white;
+          border-radius: 10px;
+        }
+
+        .billing{
+          border: 2px solid rgb(161, 161, 157) !important;
+          border-radius: 10px;
+          background-color: rgb(147, 162, 187) !important;
+          color: white;
         }
 
         h4{
-          font-size: 40px;
-          color: red;
-          text-transform: capitalize;
+          text-align: start;
+          font-size: 30px;
+          padding: 0px 0px 10px 10px ;
         }
+
+        #dateTopSection{
+          border: 2px solid rgb(161, 161, 157) !important;
+          border-radius: 10px;
+          background-color: rgb(147, 162, 187) !important;
+          padding: 20px;
+        }
+
+        #cardhead{
+          background-color: #d5d2d8;
+        }
+
+        #reset{
+          background-color: rgb(233, 106, 106);
+          color: white;
+          border: none;
+          font-weight: bold;
+          padding: 10px 20px;
+          font-size: 20px;
+          margin: 10px;
+        }
+
+        #invoiceReview{
+          background-color: #733DD9;
+          color: white;
+          border: none;
+          font-weight: bold;
+          padding: 10px 20px;
+          font-size: 20px;
+        }
+
+        img{
+          width: 100px;
+          display: flex;
+          justify-content: end;
+          background-color: rgb(215, 126, 126);
+        }
+
     </style>
   </head>
   <body>
 
     <div class="container text-center ">
-        <div class="card">
+        <div  id="cardhead">
             <div class="card-header">
-                <h1 style="text-align: center;">Invoice</h1>
+                <h1 style="text-align: center">Invoice</h1>
             </div>
             <div class="card-body">
                 <div class="container text-center">
+                  <!-- top date section -->
+                    <div class="row ms-5 text-white ps-3" >
+                      <div class="col-3 text-white" id ="dateTopSection">
+                            <div class="input-group pb-2">
+                              <span class="input-group-text " id="basic-addon1">Invoice no</span>
+                              <input type="number" class="form-control totalOfAllProducts" placeholder=""  value="1" aria-label="Username" >
+                            </div>
+                            <div class="input-group ">
+                              <span class="input-group-text " id="basic-addon1">Date</span>
+                              <input type="date" class="form-control totalOfAllProducts" placeholder="" aria-label="Username" >
+                            </div>
+                      </div>
+                      <div class="col-5"> </div>
+                      <div class="col-3 text-white">
+                        <!-- <button type="button" class="btn btn-primary" id="invoiceReview">Invoice Review</button> -->
+                        <img src="./logo.png" class="rounded float-end" alt="...">
+                      </div>
+                    
+                   
+                    </div>
+                     <!-- top date section -->
+                  <!-- billling part -->
 
-                    <div class="row  p-3 m-5" >
+                    <div class="row  p-3 ms-5 me-5" >
 
-                        <div class="col-6 p-3 billTo">
+                        <div class="col-5 p-3 billing">
                            <!-- input -->
-                           <h4>Bill to</h4>
-                           <div class="input-group mb-3">
+                           <h4>Bill By...</h4>
+                           <p>(Company Details)</p>
+                            <div class="outerWrapper" class="row">
+                                <div class="input-group p-2">
+                                  <span class="input-group-text" id="basic-addon1">Company Name</span>
+                                  <input type="text" class="form-control" placeholder="Company Name" aria-label="Username" aria-describedby="basic-addon1">
+                                </div>
+                                <div class="input-group p-2">
+                                  <span class="input-group-text" id="basic-addon1">Address</span>
+                                  <input type="text" class="form-control" placeholder="Address" aria-label="Username" aria-describedby="basic-addon1">
+                                </div>
+                                <div class="input-group p-2">
+                                  <span class="input-group-text" id="basic-addon1">Email Address</span>
+                                  <input type="text" class="form-control" placeholder="Email Address" aria-label="Username" aria-describedby="basic-addon1">
+                                </div>
+                                <div class="input-group p-2">
+                                  <span class="input-group-text" id="basic-addon1">Billing Address</span>
+                                  <input type="text" class="form-control" placeholder="Billing Address" aria-label="Username" aria-describedby="basic-addon1">
+                                </div>
+                                <div class="input-group p-2">
+                                  <span class="input-group-text" id="basic-addon1">Pin Code</span>
+                                  <input type="text" class="form-control" placeholder="Pin Code" aria-label="Username" aria-describedby="basic-addon1">
+                                </div>
+                            </div>
+                           
+                        </div>
+                        <div class="col-1"></div>
+                        <div class="col-6  p-2 billing">
+                        <!-- input -->
+                        <h4>Bill To...</h4>
+                        <p>(Clint Details)</p>
+                        <div class="outerWrapper" class="row">
+                          <div class="input-group p-2">
                             <span class="input-group-text" id="basic-addon1">Costumer Name</span>
                             <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
                           </div>
-                          <div class="input-group mb-3">
+                          <div class="input-group p-2">
                             <span class="input-group-text" id="basic-addon1">Address</span>
                             <input type="text" class="form-control" placeholder="Address" aria-label="Username" aria-describedby="basic-addon1">
                           </div>
-                          <div class="input-group mb-3">
+                          <div class="input-group p-2">
                             <span class="input-group-text" id="basic-addon1">Email Address</span>
                             <input type="text" class="form-control" placeholder="Email Address" aria-label="Username" aria-describedby="basic-addon1">
                           </div>
-                          <div class="input-group mb-3">
+                          <div class="input-group p-2">
                             <span class="input-group-text" id="basic-addon1">Billing Address</span>
                             <input type="text" class="form-control" placeholder="Billing Address" aria-label="Username" aria-describedby="basic-addon1">
                           </div>
-                          <div class="input-group mb-3">
+                          <div class="input-group p-2">
                             <span class="input-group-text" id="basic-addon1">Pin Code</span>
                             <input type="text" class="form-control" placeholder="Pin Code" aria-label="Username" aria-describedby="basic-addon1">
                           </div>
                         </div>
-
-                        <div class="col-6  p-3 billFrom">
-                        <!-- input -->
-                        <h4>Bill from</h4>
-                        <div class="input-group mb-3">
-                            <span class="input-group-text" id="basic-addon1">Costumer Name</span>
-                            <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
-                          </div>
-                          <div class="input-group mb-3">
-                            <span class="input-group-text" id="basic-addon1">Address</span>
-                            <input type="text" class="form-control" placeholder="Address" aria-label="Username" aria-describedby="basic-addon1">
-                          </div>
-                          <div class="input-group mb-3">
-                            <span class="input-group-text" id="basic-addon1">Email Address</span>
-                            <input type="text" class="form-control" placeholder="Email Address" aria-label="Username" aria-describedby="basic-addon1">
-                          </div>
-                          <div class="input-group mb-3">
-                            <span class="input-group-text" id="basic-addon1">Billing Address</span>
-                            <input type="text" class="form-control" placeholder="Billing Address" aria-label="Username" aria-describedby="basic-addon1">
-                          </div>
-                          <div class="input-group mb-3">
-                            <span class="input-group-text" id="basic-addon1">Pin Code</span>
-                            <input type="text" class="form-control" placeholder="Pin Code" aria-label="Username" aria-describedby="basic-addon1">
-                          </div>
+          
                         </div>
                     </div>
 
-
                     <!-- table -->
         
-                        <table class="table table-dark" border="5px solid black">
+                        <table class="table" id="tableContainer" border="1px solid black">
                             <thead class="text-center text-bg-warning  p-3">
-                                <tr>
-                                    <th scope="col">Id</th>
+                                <tr id="tr1">
+                                    <th>Id</th>
                                     <th scope="col">Product</th>
                                     <th scope="col">quantity</th>
                                     <th scope="col">Amount</th>
@@ -120,39 +216,47 @@
                             </tbody>
                         </table>
                         <div class="row">
-                            <div class="col-2">
+                            <!-- <div class="col-2">
                                 <button type="button" class="btn btn-primary" onclick="getPrint()">Print</button>
                             </div>
                             <div class="col-2">
                               <button type="button" class="btn btn-primary" onclick="reset()">Reset</button>
-                          </div>
+                          </div> -->
                         </div>
                         <footer>
-                            <div class="row">
+                            <div class="row pe-5 pb-5 pt-4">
                                 <div class="col-8">
                                 </div>
-                                <div class="col-4 ">
+                                <div class="col-4 outerWrapper">
                                     <!-- input -->
                               
-                                    <div class="input-group mb-3">
+                                    <div class="input-group p-2">
                                      <span class="input-group-text " id="basic-addon1">Total</span>
-                                     <input type="text" class="form-control totalOfAllProducts" placeholder="" aria-label="Username" aria-describedby="basic-addon1">
+                                     <input type="text" class="form-control " id = "totalOfAllProducts"placeholder="" aria-label="Username" aria-describedby="basic-addon1">
                                    </div>
-                                   <div class="input-group mb-3">
+                                   <div class="input-group p-2">
                                      <span class="input-group-text" id="basic-addon1">GST</span>
                                      <input type="text" class="form-control GST" placeholder="GST %" aria-label="Username" aria-describedby="basic-addon1">
                                    </div>
-                                   <div class="input-group mb-3">
+                                   <div class="input-group p-2">
                                      <span class="input-group-text" id="basic-addon1">Net Amount</span>
                                      <input type="text" class="form-control netAmount"  aria-label="Username" aria-describedby="basic-addon1">
                                    </div>
-                                   
+                                  
                                  </div>
                                  
                             </div>
                         </footer>
+                        <dic class="row pb-2">
+                          <div class="col-4"></div>
+                          <div class="col-4 ">
+                            
+                            <button type="button" class="btn btn-primary" id="reset" onclick="reset()">Reset</button>
+                            <button type="button" class="btn btn-primary" id="invoiceReview">Invoice Review</button>
+                          </div>
+                          <div class="col-4"></div>
+                        </dic>
                         
-
                     <!-- table end-->
                 </div>
             </div>
@@ -162,20 +266,7 @@
         
 
     </div>
-        <!-- <div class="container text-center">
-            <div class="row">
-              <div class="col">
-                Column
-              </div>
-              <div class="col">
-                Column
-              </div>
-              <div class="col">
-                Column
-              </div>
-            </div>
-        </div> -->
-    
+       
     <script>
         function getPrint(){
             window.print();

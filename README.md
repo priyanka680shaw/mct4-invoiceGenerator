@@ -2,7 +2,6 @@
 
 This project is an invoice generator built using HTML, CSS, and JavaScript. It allows users to input customer details, add products with their quantities and amounts, calculate the total, apply GST (Goods and Services Tax), and calculate the net amount. The interface is designed using Bootstrap for a clean and responsive layout.
 ____
-![image](https://github.com/priyanka680shaw/mct4-invoiceGenerator/assets/96192066/648e7d7f-779b-4fcd-9e11-d2f0562ecf05)
 
 ____
 ## Index
@@ -16,7 +15,7 @@ ____
 
 ## How to Use
 
-1. **Clone the Repository**: Clone this repository to your local machine using `git clone https://github.com/yourusername/invoice-generator.git`.
+1. **Clone the Repository**: Clone this repository to your local machine using `[git clone https://github.com/yourusername/invoice-generator.git](https://priyanka680shaw.github.io/mct4-invoiceGenerator/)`.
 
 2. **Open the Project**: Navigate to the project directory and open `index.html` in your web browser.
 

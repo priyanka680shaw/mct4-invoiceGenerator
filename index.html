@@ -5,122 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Bootstrap demo</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <style>
-        @media print {
-            .btn{
-                display: none;
-            }
-
-            
-        }
-
-        h1{
-          color: white;
-          font-size: 80px;
-          font-weight: bolder;
-          font-family: Arial, Helvetica, sans-serif;
-          text-shadow: 2px 10px rgb(233, 106, 106);
-        }
-
-        body{
-          background-color: #733DD9;
-        }
-
-        .container{
-          padding: 40px 0px;
-        }
-        #tr1>th{
-          background-color: #733DD9;
-          color: white;
-          margin: auto;
-
-        }
-
-        .productBlock>td{
-          background-color: rgb(192, 174, 174);
-        }
-
-        #tableContainer{
-          border-radius: 15px;
-        }
-
-        .outerWrapper{
-          border: 2px solid rgb(161, 161, 157) !important;
-          background-color: white;
-          border-radius: 10px;
-        }
-
-        .billing{
-          border: 2px solid rgb(161, 161, 157) !important;
-          border-radius: 10px;
-          background-color: rgb(147, 162, 187) !important;
-          color: white;
-        }
-
-        h4{
-          text-align: start;
-          font-size: 30px;
-          padding: 0px 0px 10px 10px ;
-        }
-
-        #dateTopSection{
-          border: 2px solid rgb(161, 161, 157) !important;
-          border-radius: 10px;
-          background-color: rgb(147, 162, 187) !important;
-          padding: 20px;
-        }
-
-        #cardhead{
-          background-color: #d5d2d8;
-        }
-
-        #reset{
-          background-color: rgb(233, 106, 106);
-          color: white;
-          border: none;
-          font-weight: bold;
-          padding: 10px 20px;
-          font-size: 20px;
-          margin: 10px;
-        }
-
-        #invoiceReview{
-          background-color: #733DD9;
-          color: white;
-          border: none;
-          font-weight: bold;
-          padding: 10px 20px;
-          font-size: 20px;
-        }
-
-        img{
-          width: 100px;
-          display: flex;
-          justify-content: end;
-          background-color: rgb(215, 126, 126);
-        }
-
-    </style>
+    <link rel="stylesheet" href="./css/style.css">
   </head>
   <body>
 
     <div class="container text-center ">
         <div  id="cardhead">
             <div class="card-header">
-                <h1 style="text-align: center">Invoice</h1>
+                <h1 style="text-align: center">Invoice Generator</h1>
             </div>
             <div class="card-body">
                 <div class="container text-center">
                   <!-- top date section -->
                     <div class="row ms-5 text-white ps-3" >
-                      <div class="col-3 text-white" id ="dateTopSection">
+                      <div class="col-3 text-white" id ="invoiceNo_date" >
                             <div class="input-group pb-2">
                               <span class="input-group-text " id="basic-addon1">Invoice no</span>
-                              <input type="number" class="form-control totalOfAllProducts" placeholder=""  value="1" aria-label="Username" >
+                              <input type="number" class="form-control invoiceNo" placeholder=""   aria-label="Username" >
                             </div>
                             <div class="input-group ">
                               <span class="input-group-text " id="basic-addon1">Date</span>
-                              <input type="date" class="form-control totalOfAllProducts" placeholder="" aria-label="Username" >
+                              <input type="date" class="form-control " placeholder="" aria-label="Username" >
                             </div>
                       </div>
                       <div class="col-5"> </div>
@@ -140,55 +45,54 @@
                            <!-- input -->
                            <h4>Bill By...</h4>
                            <p>(Company Details)</p>
-                            <div class="outerWrapper" class="row">
+                            <div class="outerWrapper" class="row" id="billBy">
                                 <div class="input-group p-2">
-                                  <span class="input-group-text" id="basic-addon1">Company Name</span>
-                                  <input type="text" class="form-control" placeholder="Company Name" aria-label="Username" aria-describedby="basic-addon1">
+                                  <span class="input-group-text companyName " id="basic-addon1">Company Name</span>
+                                  <input type="text" class="form-control companyName companyNameBB " placeholder="Company Name" aria-label="Username" aria-describedby="basic-addon1">
                                 </div>
                                 <div class="input-group p-2">
                                   <span class="input-group-text" id="basic-addon1">Address</span>
-                                  <input type="text" class="form-control" placeholder="Address" aria-label="Username" aria-describedby="basic-addon1">
+                                  <input type="text" class="form-control address addressBB" placeholder="Address" aria-label="Username" aria-describedby="basic-addon1">
                                 </div>
                                 <div class="input-group p-2">
                                   <span class="input-group-text" id="basic-addon1">Email Address</span>
-                                  <input type="text" class="form-control" placeholder="Email Address" aria-label="Username" aria-describedby="basic-addon1">
+                                  <input type="email" class="form-control emailBB" placeholder="Email Address" aria-label="Username" aria-describedby="basic-addon1">
                                 </div>
                                 <div class="input-group p-2">
                                   <span class="input-group-text" id="basic-addon1">Billing Address</span>
-                                  <input type="text" class="form-control" placeholder="Billing Address" aria-label="Username" aria-describedby="basic-addon1">
+                                  <input type="text" class="form-control billingAdd billingAddBB" placeholder="Billing Address" aria-label="Username" aria-describedby="basic-addon1">
                                 </div>
                                 <div class="input-group p-2">
                                   <span class="input-group-text" id="basic-addon1">Pin Code</span>
-                                  <input type="text" class="form-control" placeholder="Pin Code" aria-label="Username" aria-describedby="basic-addon1">
+                                  <input type="text" class="form-control PinCode PinCodeBB" placeholder="Pin Code" aria-label="Username" aria-describedby="basic-addon1">
                                 </div>
                             </div>
-                           
                         </div>
                         <div class="col-1"></div>
                         <div class="col-6  p-2 billing">
                         <!-- input -->
                         <h4>Bill To...</h4>
                         <p>(Clint Details)</p>
-                        <div class="outerWrapper" class="row">
+                        <div class="outerWrapper" class="row" id="billTo">
                           <div class="input-group p-2">
                             <span class="input-group-text" id="basic-addon1">Costumer Name</span>
-                            <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
+                            <input type="text" class="form-control companyName companyNameBF" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
                           </div>
                           <div class="input-group p-2">
                             <span class="input-group-text" id="basic-addon1">Address</span>
-                            <input type="text" class="form-control" placeholder="Address" aria-label="Username" aria-describedby="basic-addon1">
+                            <input type="text" class="form-control address addressBF" placeholder="Address" aria-label="Username" aria-describedby="basic-addon1">
                           </div>
                           <div class="input-group p-2">
                             <span class="input-group-text" id="basic-addon1">Email Address</span>
-                            <input type="text" class="form-control" placeholder="Email Address" aria-label="Username" aria-describedby="basic-addon1">
+                            <input type="text" class="form-control email emailBF" placeholder="Email Address" aria-label="Username" aria-describedby="basic-addon1">
                           </div>
                           <div class="input-group p-2">
                             <span class="input-group-text" id="basic-addon1">Billing Address</span>
-                            <input type="text" class="form-control" placeholder="Billing Address" aria-label="Username" aria-describedby="basic-addon1">
+                            <input type="text" class="form-control billingAdd billingAddBF" placeholder="Billing Address" aria-label="Username" aria-describedby="basic-addon1">
                           </div>
                           <div class="input-group p-2">
                             <span class="input-group-text" id="basic-addon1">Pin Code</span>
-                            <input type="text" class="form-control" placeholder="Pin Code" aria-label="Username" aria-describedby="basic-addon1">
+                            <input type="text" class="form-control PinCode PinCodeBF" placeholder="Pin Code" aria-label="Username" aria-describedby="basic-addon1">
                           </div>
                         </div>
           
@@ -197,7 +101,7 @@
 
                     <!-- table -->
         
-                        <table class="table" id="tableContainer" border="1px solid black">
+                         <table class="table" id="tableContainer" border="1px solid black">
                             <thead class="text-center text-bg-warning  p-3">
                                 <tr id="tr1">
                                     <th>Id</th>
@@ -212,16 +116,11 @@
                             <tbody class="text-center items-Container">
 
                                 <!-- dynamically add itens coloumn here ....... -->
-
+                               
                             </tbody>
                         </table>
+                        <!-- kkkkkkkkkkkkkkkkkkkkkk -->
                         <div class="row">
-                            <!-- <div class="col-2">
-                                <button type="button" class="btn btn-primary" onclick="getPrint()">Print</button>
-                            </div>
-                            <div class="col-2">
-                              <button type="button" class="btn btn-primary" onclick="reset()">Reset</button>
-                          </div> -->
                         </div>
                         <footer>
                             <div class="row pe-5 pb-5 pt-4">
@@ -240,7 +139,7 @@
                                    </div>
                                    <div class="input-group p-2">
                                      <span class="input-group-text" id="basic-addon1">Net Amount</span>
-                                     <input type="text" class="form-control netAmount"  aria-label="Username" aria-describedby="basic-addon1">
+                                     <input type="text" class="form-control netAmount "  aria-label="Username" aria-describedby="basic-addon1">
                                    </div>
                                   
                                  </div>
@@ -252,7 +151,7 @@
                           <div class="col-4 ">
                             
                             <button type="button" class="btn btn-primary" id="reset" onclick="reset()">Reset</button>
-                            <button type="button" class="btn btn-primary" id="invoiceReview">Invoice Review</button>
+                            <button type="button" class="btn btn-primary" id="invoiceReview" onclick="getPrint()">Print</button>
                           </div>
                           <div class="col-4"></div>
                         </dic>
@@ -262,17 +161,49 @@
             </div>
         </div>
         <!-- adding table -->
-
-        
-
     </div>
-       
+       <!-- review -->
+
+
+       <table class="table" id="tableContainer" border="1px solid black">
+        <thead class="text-center text-bg-warning  p-3">
+            <tr id="tr1">
+                <th>Id</th>
+                <th scope="col">Product</th>
+                <th scope="col">quantity</th>
+                <th scope="col">Amount</th>
+                <th scope="col">Total</th>
+                <th scope="col"><button type="button" class="btn btn-warning text-end addButton">+</button></th>
+            </tr>
+        </thead>
+   
+        <tbody class="text-center items-Container2">
+
+            <!-- dynamically add itens coloumn here ....... -->
+            <tr class="productBlock">
+              <th >1</th>
+              <td> <input type="text"   class="form-control text-center ${count} Product" placeholder="Product" aria-label="Username" aria-describedby="basic-addon1"></td>
+              <td> <input type="number" class="form-control text-center ${count} quantity" placeholder="quantity" aria-label="Username" aria-describedby="basic-addon1"></td>
+              <td> <input type="number" class="form-control text-center ${count} amount" placeholder="Amount" aria-label="Username" aria-describedby="basic-addon1"></td>
+              <td> <input type="" class="form-control text-center ${count} total" value="900" placeholder="total" aria-label="Username" aria-describedby="basic-addon1"></td>
+              <td> <button type="button" class="btn btn-danger ${count} deleteBtn">X</button></td>
+             </tr>
+        </tbody>
+    </table>
+
+
+
+
+
+
+
+
+
     <script>
         function getPrint(){
             window.print();
         }
     </script>
-    
 
     <script src="./js/script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
